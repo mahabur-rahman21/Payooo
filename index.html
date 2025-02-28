@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payooo Mobile Bank</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                bgColor: '#F4F5F7',
+              }
+            }
+          }
+        }
+      </script>
+
+
+  </head>
+  <body class="bg-gray-900">
+    <section class="max-w-md min-h-screen mx-auto bg-bgColor">
+      <header>
+
+        <section class="flex justify-center items-center relative">
+
+            <img src="assets/bg.png" class="w-4/6 mt-16">
+            <img src="assets/Group.png" class="absolute top-28">
+
+        </section>
+
+      </header>
+
+      <main>
+
+        <section class="-mt-36">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <div class="card bg-base-100 w-full max-w-sm shrink-0 ">
+                <div class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text font-bold">Mobile Number</span>
+                    </label>
+                    <input id="mobile-number" value="01759770801" type="number" placeholder="Enter your number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text font-bold">Password</span>
+                    </label>
+                    <input id="pin-number" value="1234" type="password" placeholder="Enter 4 Digit Pin" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                   
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="login-btn" class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white">Login</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+         
+
+        </section>
+
+      </main>
+    </section>
+
+    <script src="scripts/login.js"></script>
+    <script>
+     
+    </script>
+  </body>
+</html>

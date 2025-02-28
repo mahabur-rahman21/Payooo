@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payooo Mobile Bank Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              bgColor: "#F4F5F7",
+              colorPrimary: "#0874F2",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gray-900">
+    <section class="max-w-md min-h-screen mx-auto bg-bgColor">
+      <header>
+        <section class="flex justify-between items-center p-3 border-b-2">
+          <div class="flex items-center justify-center px-3">
+            <div>
+              <img class="w-5/6" src="assets/Group.png" alt="" />
+            </div>
+            <div>
+              <h1 class="font-extrabold text-xl text-black">$45000</h1>
+              <p class="text-gray-600">Available Balance</p>
+            </div>
+          </div>
+          <div>
+            <button
+              class="btn bg-white border text-gray-700 border-gray-300 hover:bg-colorPrimary hover:text-white hover:border-colorPrimary"
+            >
+              Log Out
+            </button>
+          </div>
+        </section>
+      </header>
+      <main class="bg-[#F4F5F7]">
+        <section class="bg-white rounded-b-3xl p-3">
+          <section class="pb-4">
+            <h1 class="text-black font-bold text-2xl">🔥Welcome to Payooo!</h1>
+            <p class="text-gray-700 text-xl">
+              Enjoy easy and convenient financial services with us. Cashout
+              charge is low and
+            </p>
+          </section>
+
+          <section class="grid grid-cols-3 gap-2 mb-5">
+            <div
+              class="py-6 border-2 rounded-md flex justify-center items-center flex-col hover:border-colorPrimary hover:bg-blue-100"
+            >
+              <img src="assets/wallet1.png" alt="" />
+              <p
+                class="text-gray-700 font-semibold mt-2 hover:text-colorPrimary"
+              >
+                Add Money
+              </p>
+            </div>
+            <div
+              class="py-6 border-2 rounded-md flex justify-center items-center flex-col hover:border-colorPrimary hover:bg-blue-100"
+            >
+              <img src="assets/send1.png" alt="" />
+              <p
+                class="text-gray-700 font-semibold mt-2 hover:text-colorPrimary"
+              >
+                Cashout
+              </p>
+            </div>
+            <div
+              class="py-6 border-2 rounded-md flex justify-center items-center flex-col hover:border-colorPrimary hover:bg-blue-100"
+            >
+              <img src="assets/transaction1.png" alt="" />
+              <p
+                class="text-gray-700 font-semibold mt-2 hover:text-colorPrimary"
+              >
+                Transfer Money
+              </p>
+            </div>
+            <div
+              class="py-6 border-2 rounded-md flex justify-center items-center flex-col hover:border-colorPrimary hover:bg-blue-100"
+            >
+              <img src="assets/bonus1.png" alt="" />
+              <p
+                class="text-gray-700 font-semibold mt-2 hover:text-colorPrimary"
+              >
+                Get Bonus
+              </p>
+            </div>
+            <div
+              class="py-6 border-2 rounded-md flex justify-center items-center flex-col hover:border-colorPrimary hover:bg-blue-100"
+            >
+              <img src="assets/wallet1.png" alt="" />
+              <p
+                class="text-gray-700 font-semibold mt-2 hover:text-colorPrimary"
+              >
+                Pay Bill
+              </p>
+            </div>
+            <div
+              class="py-6 border-2 rounded-md flex justify-center items-center flex-col hover:border-colorPrimary hover:bg-blue-100"
+            >
+              <img src="assets/purse1.png" alt="" />
+              <p
+                class="text-gray-700 font-semibold mt-2 hover:text-colorPrimary"
+              >
+                Transactions
+              </p>
+            </div>
+          </section>
+        </section>
+        <section id="add-Money-Section">
+
+          <div>
+            <div class="p-6 font-semibold">
+              <h1>Add Money</h1>
+            </div>
+            <div class="bg-white rounded-lg w-11/12 mx-auto p-5">
+              
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Select A Bank</span>
+                </label>
+                <select  id="bank" name="bank" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5 ">
+                  <option disabled selected>Select bank</option>
+                  <option value="Bkash">Bkash</option>
+                  <option value="Nagod">Nagod</option>
+                  <option value="Rocket">Rocket</option>
+                  <option value="Upay">Upay</option>
+                </select>
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Bank Account Number</span>
+                </label>
+                <input id="mobile-number"  type="number" placeholder="Enter 11 digit account number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Amount to Add</span>
+                </label>
+                <input id="Amount"  type="number" placeholder="Add Amount to withdraw" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Pin Number</span>
+                </label>
+                <input id="pin"  type="number" placeholder="Enter 4 digit pin number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="add-Money-btn" class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white">Add Money</button>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+        <section id="cash-Out-Section">
+          <div>
+            <div class="p-6 font-semibold">
+              <h1>Cash Out</h1>
+            </div>
+            <div class="bg-white rounded-lg w-11/12 mx-auto p-5">
+              
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Agent Number</span>
+                </label>
+                <input id="agent-number"  type="number" placeholder="Enter 11 digit account number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Amount</span>
+                </label>
+                <input id="cash-Out-Amount"  type="number" placeholder="Enter amount to withdraw" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Pin Number</span>
+                </label>
+                <input id="pin"  type="number" placeholder="Enter 4 digit pin number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="cash-Out-btn" class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white">Withdraw Money</button>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <section id="transfer-Money-Section">
+          <div>
+            <div class="p-6 font-semibold">
+              <h1>Transfer Money</h1>
+            </div>
+            <div class="bg-white rounded-lg w-11/12 mx-auto p-5">
+              
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">User Account Number</span>
+                </label>
+                <input id="user-Account-number"  type="number" placeholder="Enter 11 digit account number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Amount</span>
+                </label>
+                <input id="transfer-Amount"  type="number" placeholder="Enter amount to transfer" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Pin Number</span>
+                </label>
+                <input id="pin"  type="number" placeholder="Enter 4 digit pin number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="transfer-btn" class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white">Send Now</button>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <section id="get-Bonus-Section">
+          <div>
+            <div class="p-6 font-semibold">
+              <h1>Get Bonus</h1>
+            </div>
+            <div class="bg-white rounded-lg w-11/12 mx-auto p-5">
+              
+              
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Bonus Coupon</span>
+                </label>
+                <input id="bonus-Coupon"  type="number" placeholder="Enter your coupon" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+              </div>
+            
+              <div class="form-control mt-6">
+                <button id="get-Bonus-btn" class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white">Get Bonus</button>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <section id="pay-Bill-Section">
+          <div>
+            <div class="p-6 font-semibold">
+              <h1>Add Money</h1>
+            </div>
+            <div class="bg-white rounded-lg w-11/12 mx-auto p-5">
+              
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Select A Bank</span>
+                </label>
+                <select  id="bank" name="bank" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5 ">
+                  <option disabled selected>Select bank</option>
+                  <option value="Bkash">Bkash</option>
+                  <option value="Nagod">Nagod</option>
+                  <option value="Rocket">Rocket</option>
+                  <option value="Upay">Upay</option>
+                </select>
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Bank Account Number</span>
+                </label>
+                <input id="mobile-number"  type="number" placeholder="Enter 11 digit account number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Amount to Add</span>
+                </label>
+                <input id="Amount"  type="number" placeholder="Add Amount to withdraw" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Pin Number</span>
+                </label>
+                <input id="pin"  type="number" placeholder="Enter 4 digit pin number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="add-Money-btn" class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white">Add Money</button>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <section id="transaction-History-Section">
+          <div>
+            <div class="p-6 font-semibold">
+              <h1>Add Money</h1>
+            </div>
+            <div class="bg-white rounded-lg w-11/12 mx-auto p-5">
+              
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Select A Bank</span>
+                </label>
+                <select  id="bank" name="bank" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5 ">
+                  <option disabled selected>Select bank</option>
+                  <option value="Bkash">Bkash</option>
+                  <option value="Nagod">Nagod</option>
+                  <option value="Rocket">Rocket</option>
+                  <option value="Upay">Upay</option>
+                </select>
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Bank Account Number</span>
+                </label>
+                <input id="mobile-number"  type="number" placeholder="Enter 11 digit account number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Amount to Add</span>
+                </label>
+                <input id="Amount"  type="number" placeholder="Add Amount to withdraw" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Pin Number</span>
+                </label>
+                <input id="pin"  type="number" placeholder="Enter 4 digit pin number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="add-Money-btn" class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white">Add Money</button>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </main>
+    </section>
+
+    <script src="scripts/home.js"></script>
+  </body>
+</html>
