@@ -5,6 +5,36 @@ let getBonus = document.getElementById("getBonus");
 let payBill = document.getElementById("payBill");
 let transactions = document.getElementById("transactions");
 
+let addMoneyBtn = document.getElementById("addMoneyBtn");
+
+
+addMoneyBtn.addEventListener("click", function (e) {
+
+    e.preventDefault
+
+    let bank=document.getElementById("bank").value;
+    let bankAccountNumber=document.getElementById("bankAccountNumber").value;
+    let addAmount=document.getElementById("addAmount").value;
+    let addPin=document.getElementById("addPin").value;
+
+
+
+    console.log(typeof bank)
+
+    if(bank==="select"){
+
+        alert("Select A Bank")
+
+    }
+    
+})
+
+
+
+
+
+
+
 
 
 addMoney.addEventListener("click", function (e) {

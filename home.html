@@ -48,7 +48,6 @@
         </section>
       </header>
       <main class="bg-[#F4F5F7]">
-
         <section class="bg-white rounded-b-3xl p-3">
           <section class="pb-4">
             <h1 class="text-black font-bold text-2xl">🔥Welcome to Payooo!</h1>
@@ -60,7 +59,7 @@
 
           <section class="grid grid-cols-3 gap-2 mb-5">
             <div
-            id="addMoney"
+              id="addMoney"
               class="py-6 border-2 rounded-md flex justify-center items-center flex-col hover:border-colorPrimary hover:bg-blue-100"
             >
               <img src="assets/wallet1.png" alt="" />
@@ -71,7 +70,7 @@
               </p>
             </div>
             <div
-            id="cashOut"
+              id="cashOut"
               class="py-6 border-2 rounded-md flex justify-center items-center flex-col hover:border-colorPrimary hover:bg-blue-100"
             >
               <img src="assets/send1.png" alt="" />
@@ -82,7 +81,7 @@
               </p>
             </div>
             <div
-            id="transferMoney"
+              id="transferMoney"
               class="py-6 border-2 rounded-md flex justify-center items-center flex-col hover:border-colorPrimary hover:bg-blue-100"
             >
               <img src="assets/transaction1.png" alt="" />
@@ -93,7 +92,7 @@
               </p>
             </div>
             <div
-            id="getBonus"
+              id="getBonus"
               class="py-6 border-2 rounded-md flex justify-center items-center flex-col hover:border-colorPrimary hover:bg-blue-100"
             >
               <img src="assets/bonus1.png" alt="" />
@@ -104,7 +103,7 @@
               </p>
             </div>
             <div
-            id="payBill"
+              id="payBill"
               class="py-6 border-2 rounded-md flex justify-center items-center flex-col hover:border-colorPrimary hover:bg-blue-100"
             >
               <img src="assets/wallet1.png" alt="" />
@@ -115,7 +114,7 @@
               </p>
             </div>
             <div
-            id="transactions"
+              id="transactions"
               class="py-6 border-2 rounded-md flex justify-center items-center flex-col hover:border-colorPrimary hover:bg-blue-100"
             >
               <img src="assets/purse1.png" alt="" />
@@ -129,19 +128,21 @@
         </section>
 
         <section id="add-Money-Section" class="pb-8">
-
           <div>
             <div class="p-6 font-semibold">
               <h1>Add Money</h1>
             </div>
             <div class="bg-white rounded-lg w-11/12 mx-auto p-5">
-              
               <div class="form-control">
                 <label class="label">
                   <span class="label-text font-bold">Select A Bank</span>
                 </label>
-                <select  id="bank" name="bank" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5 ">
-                  <option disabled selected>Select bank</option>
+                <select
+                  id="bank"
+                  name="bank"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                >
+                  <option disabled selected value="select">Select bank</option>
                   <option value="Bkash">Bkash</option>
                   <option value="Nagod">Nagod</option>
                   <option value="Rocket">Rocket</option>
@@ -152,59 +153,100 @@
                 <label class="label">
                   <span class="label-text font-bold">Bank Account Number</span>
                 </label>
-                <input id="mobile-number"  type="number" placeholder="Enter 11 digit account number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                <input
+                  id="bankAccountNumber"
+                  type="number"
+                  placeholder="Enter 11 digit account number"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                  required
+                />
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="label-text font-bold">Amount to Add</span>
                 </label>
-                <input id="Amount"  type="number" placeholder="Add Amount to withdraw" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                <input
+                  id="addAmount"
+                  type="number"
+                  placeholder="Add Amount to withdraw"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                  required
+                />
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="label-text font-bold">Pin Number</span>
                 </label>
-                <input id="pin"  type="number" placeholder="Enter 4 digit pin number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                <input
+                  id="addPin"
+                  type="number"
+                  placeholder="Enter 4 digit pin number"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                  required
+                />
               </div>
               <div class="form-control mt-6">
-                <button id="add-Money-btn" class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white">Add Money</button>
+                <button
+                  id="addMoneyBtn"
+                  class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white"
+                >
+                  Add Money
+                </button>
               </div>
-
             </div>
           </div>
-
         </section>
 
-
-        <section id="cash-Out-Section"  class="hidden pb-8">
+        <section id="cash-Out-Section" class="hidden pb-8">
           <div>
             <div class="p-6 font-semibold">
               <h1>Cash Out</h1>
             </div>
             <div class="bg-white rounded-lg w-11/12 mx-auto p-5">
-              
               <div class="form-control">
                 <label class="label">
                   <span class="label-text font-bold">Agent Number</span>
                 </label>
-                <input id="agent-number"  type="number" placeholder="Enter 11 digit account number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                <input
+                  id="agent-number"
+                  type="number"
+                  placeholder="Enter 11 digit account number"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                  required
+                />
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="label-text font-bold">Amount</span>
                 </label>
-                <input id="cash-Out-Amount"  type="number" placeholder="Enter amount to withdraw" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                <input
+                  id="cash-Out-Amount"
+                  type="number"
+                  placeholder="Enter amount to withdraw"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                  required
+                />
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="label-text font-bold">Pin Number</span>
                 </label>
-                <input id="pin"  type="number" placeholder="Enter 4 digit pin number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                <input
+                  id="pin"
+                  type="number"
+                  placeholder="Enter 4 digit pin number"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                  required
+                />
               </div>
               <div class="form-control mt-6">
-                <button id="cash-Out-btn" class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white">Withdraw Money</button>
+                <button
+                  id="cash-Out-btn"
+                  class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white"
+                >
+                  Withdraw Money
+                </button>
               </div>
-
             </div>
           </div>
         </section>
@@ -215,69 +257,100 @@
               <h1>Transfer Money</h1>
             </div>
             <div class="bg-white rounded-lg w-11/12 mx-auto p-5">
-              
               <div class="form-control">
                 <label class="label">
                   <span class="label-text font-bold">User Account Number</span>
                 </label>
-                <input id="user-Account-number"  type="number" placeholder="Enter 11 digit account number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                <input
+                  id="user-Account-number"
+                  type="number"
+                  placeholder="Enter 11 digit account number"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                  required
+                />
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="label-text font-bold">Amount</span>
                 </label>
-                <input id="transfer-Amount"  type="number" placeholder="Enter amount to transfer" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                <input
+                  id="transfer-Amount"
+                  type="number"
+                  placeholder="Enter amount to transfer"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                  required
+                />
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="label-text font-bold">Pin Number</span>
                 </label>
-                <input id="pin"  type="number" placeholder="Enter 4 digit pin number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                <input
+                  id="pin"
+                  type="number"
+                  placeholder="Enter 4 digit pin number"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                  required
+                />
               </div>
               <div class="form-control mt-6">
-                <button id="transfer-btn" class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white">Send Now</button>
+                <button
+                  id="transfer-btn"
+                  class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white"
+                >
+                  Send Now
+                </button>
               </div>
-
             </div>
           </div>
         </section>
 
-        <section id="get-Bonus-Section"  class="hidden pb-8">
+        <section id="get-Bonus-Section" class="hidden pb-8">
           <div>
             <div class="p-6 font-semibold">
               <h1>Get Bonus</h1>
             </div>
             <div class="bg-white rounded-lg w-11/12 mx-auto p-5">
-              
-              
-
               <div class="form-control">
                 <label class="label">
                   <span class="label-text font-bold">Bonus Coupon</span>
                 </label>
-                <input id="bonus-Coupon"  type="text" placeholder="Enter your coupon" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
-              </div>
-            
-              <div class="form-control mt-6">
-                <button id="get-Bonus-btn" class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white">Get Bonus</button>
+                <input
+                  id="bonus-Coupon"
+                  type="text"
+                  placeholder="Enter your coupon"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                  required
+                />
               </div>
 
+              <div class="form-control mt-6">
+                <button
+                  id="get-Bonus-btn"
+                  class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white"
+                >
+                  Get Bonus
+                </button>
+              </div>
             </div>
           </div>
         </section>
 
-        <section id="pay-Bill-Section"  class="hidden pb-8">
+        <section id="pay-Bill-Section" class="hidden pb-8">
           <div>
             <div class="p-6 font-semibold">
               <h1>Pay Bill</h1>
             </div>
             <div class="bg-white rounded-lg w-11/12 mx-auto p-5">
-              
               <div class="form-control">
                 <label class="label">
                   <span class="label-text font-bold">Select To Pay</span>
                 </label>
-                <select  id="bank" name="bank" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5 ">
+                <select
+                  id="bank"
+                  name="bank"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                >
                   <option disabled selected>Select bank</option>
                   <option value="Bkash">Bkash</option>
                   <option value="Nagod">Nagod</option>
@@ -287,42 +360,69 @@
               </div>
               <div class="form-control">
                 <label class="label">
-                  <span class="label-text font-bold">Biller Account Number</span>
+                  <span class="label-text font-bold"
+                    >Biller Account Number</span
+                  >
                 </label>
-                <input id="biller-number"  type="number" placeholder="Enter account number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                <input
+                  id="biller-number"
+                  type="number"
+                  placeholder="Enter account number"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                  required
+                />
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="label-text font-bold">Amount to Pay</span>
                 </label>
-                <input id="amount"  type="number" placeholder="Add Amount to pay" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                <input
+                  id="payAmount"
+                  type="number"
+                  placeholder="Add Amount to pay"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                  required
+                />
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="label-text font-bold">Pin Number</span>
                 </label>
-                <input id="pin"  type="number" placeholder="Enter 4 digit pin number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                <input
+                  id="pin"
+                  type="number"
+                  placeholder="Enter 4 digit pin number"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                  required
+                />
               </div>
               <div class="form-control mt-6">
-                <button id="pay-Bill-btn" class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white">Pay Now</button>
+                <button
+                  id="pay-Bill-btn"
+                  class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white"
+                >
+                  Pay Now
+                </button>
               </div>
-
             </div>
           </div>
         </section>
 
-        <section id="transaction-History-Section"  class="hidden pb-8">
+        <section id="transaction-History-Section" class="hidden pb-8">
           <div>
             <div class="p-6 font-semibold">
               <h1>Transaction History</h1>
             </div>
             <div class="bg-white rounded-lg w-11/12 mx-auto p-5">
-              
               <div class="form-control">
                 <label class="label">
                   <span class="label-text font-bold">Select A Bank</span>
                 </label>
-                <select  id="bank" name="bank" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5 ">
+                <select
+                  id="bank"
+                  name="bank"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                >
                   <option disabled selected>Select bank</option>
                   <option value="Bkash">Bkash</option>
                   <option value="Nagod">Nagod</option>
@@ -334,24 +434,46 @@
                 <label class="label">
                   <span class="label-text font-bold">Bank Account Number</span>
                 </label>
-                <input id="mobile-number"  type="number" placeholder="Enter 11 digit account number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                <input
+                  id="mobile-number"
+                  type="number"
+                  placeholder="Enter 11 digit account number"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                  required
+                />
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="label-text font-bold">Amount to Add</span>
                 </label>
-                <input id="Amount"  type="number" placeholder="Add Amount to withdraw" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                <input
+                  
+                  type="number"
+                  placeholder="Add Amount to withdraw"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                  required
+                />
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="label-text font-bold">Pin Number</span>
                 </label>
-                <input id="pin"  type="number" placeholder="Enter 4 digit pin number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                <input
+                  id="pin"
+                  type="number"
+                  placeholder="Enter 4 digit pin number"
+                  class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500 w-full p-2.5"
+                  required
+                />
               </div>
               <div class="form-control mt-6">
-                <button id="add-Money-btn" class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white">Add Money</button>
+                <button
+                  id="add-Money-btn"
+                  class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white"
+                >
+                  Add Money
+                </button>
               </div>
-
             </div>
           </div>
         </section>
