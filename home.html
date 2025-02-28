@@ -48,6 +48,7 @@
         </section>
       </header>
       <main class="bg-[#F4F5F7]">
+
         <section class="bg-white rounded-b-3xl p-3">
           <section class="pb-4">
             <h1 class="text-black font-bold text-2xl">🔥Welcome to Payooo!</h1>
@@ -59,6 +60,7 @@
 
           <section class="grid grid-cols-3 gap-2 mb-5">
             <div
+            id="addMoney"
               class="py-6 border-2 rounded-md flex justify-center items-center flex-col hover:border-colorPrimary hover:bg-blue-100"
             >
               <img src="assets/wallet1.png" alt="" />
@@ -69,6 +71,7 @@
               </p>
             </div>
             <div
+            id="cashOut"
               class="py-6 border-2 rounded-md flex justify-center items-center flex-col hover:border-colorPrimary hover:bg-blue-100"
             >
               <img src="assets/send1.png" alt="" />
@@ -79,6 +82,7 @@
               </p>
             </div>
             <div
+            id="transferMoney"
               class="py-6 border-2 rounded-md flex justify-center items-center flex-col hover:border-colorPrimary hover:bg-blue-100"
             >
               <img src="assets/transaction1.png" alt="" />
@@ -89,6 +93,7 @@
               </p>
             </div>
             <div
+            id="getBonus"
               class="py-6 border-2 rounded-md flex justify-center items-center flex-col hover:border-colorPrimary hover:bg-blue-100"
             >
               <img src="assets/bonus1.png" alt="" />
@@ -99,6 +104,7 @@
               </p>
             </div>
             <div
+            id="payBill"
               class="py-6 border-2 rounded-md flex justify-center items-center flex-col hover:border-colorPrimary hover:bg-blue-100"
             >
               <img src="assets/wallet1.png" alt="" />
@@ -109,6 +115,7 @@
               </p>
             </div>
             <div
+            id="transactions"
               class="py-6 border-2 rounded-md flex justify-center items-center flex-col hover:border-colorPrimary hover:bg-blue-100"
             >
               <img src="assets/purse1.png" alt="" />
@@ -120,7 +127,8 @@
             </div>
           </section>
         </section>
-        <section id="add-Money-Section">
+
+        <section id="add-Money-Section" class="pb-8">
 
           <div>
             <div class="p-6 font-semibold">
@@ -167,7 +175,8 @@
 
         </section>
 
-        <section id="cash-Out-Section">
+
+        <section id="cash-Out-Section"  class="hidden pb-8">
           <div>
             <div class="p-6 font-semibold">
               <h1>Cash Out</h1>
@@ -199,7 +208,8 @@
             </div>
           </div>
         </section>
-        <section id="transfer-Money-Section">
+
+        <section id="transfer-Money-Section" class="hidden pb-8">
           <div>
             <div class="p-6 font-semibold">
               <h1>Transfer Money</h1>
@@ -231,7 +241,8 @@
             </div>
           </div>
         </section>
-        <section id="get-Bonus-Section">
+
+        <section id="get-Bonus-Section"  class="hidden pb-8">
           <div>
             <div class="p-6 font-semibold">
               <h1>Get Bonus</h1>
@@ -244,7 +255,7 @@
                 <label class="label">
                   <span class="label-text font-bold">Bonus Coupon</span>
                 </label>
-                <input id="bonus-Coupon"  type="number" placeholder="Enter your coupon" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                <input id="bonus-Coupon"  type="text" placeholder="Enter your coupon" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
               </div>
             
               <div class="form-control mt-6">
@@ -254,16 +265,17 @@
             </div>
           </div>
         </section>
-        <section id="pay-Bill-Section">
+
+        <section id="pay-Bill-Section"  class="hidden pb-8">
           <div>
             <div class="p-6 font-semibold">
-              <h1>Add Money</h1>
+              <h1>Pay Bill</h1>
             </div>
             <div class="bg-white rounded-lg w-11/12 mx-auto p-5">
               
               <div class="form-control">
                 <label class="label">
-                  <span class="label-text font-bold">Select A Bank</span>
+                  <span class="label-text font-bold">Select To Pay</span>
                 </label>
                 <select  id="bank" name="bank" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5 ">
                   <option disabled selected>Select bank</option>
@@ -275,15 +287,15 @@
               </div>
               <div class="form-control">
                 <label class="label">
-                  <span class="label-text font-bold">Bank Account Number</span>
+                  <span class="label-text font-bold">Biller Account Number</span>
                 </label>
-                <input id="mobile-number"  type="number" placeholder="Enter 11 digit account number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                <input id="biller-number"  type="number" placeholder="Enter account number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
               </div>
               <div class="form-control">
                 <label class="label">
-                  <span class="label-text font-bold">Amount to Add</span>
+                  <span class="label-text font-bold">Amount to Pay</span>
                 </label>
-                <input id="Amount"  type="number" placeholder="Add Amount to withdraw" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
+                <input id="amount"  type="number" placeholder="Add Amount to pay" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
               </div>
               <div class="form-control">
                 <label class="label">
@@ -292,16 +304,17 @@
                 <input id="pin"  type="number" placeholder="Enter 4 digit pin number" class="bg-[#F4F5F7] border-3 border-gray-300 text-gray-900 text-sm rounded-2xl outline-2 outline-blue-500  w-full p-2.5" required />
               </div>
               <div class="form-control mt-6">
-                <button id="add-Money-btn" class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white">Add Money</button>
+                <button id="pay-Bill-btn" class="btn bg-[#0874F2] text-white rounded-3xl hover:bg-[#0874F2] hover:text-white">Pay Now</button>
               </div>
 
             </div>
           </div>
         </section>
-        <section id="transaction-History-Section">
+
+        <section id="transaction-History-Section"  class="hidden pb-8">
           <div>
             <div class="p-6 font-semibold">
-              <h1>Add Money</h1>
+              <h1>Transaction History</h1>
             </div>
             <div class="bg-white rounded-lg w-11/12 mx-auto p-5">
               
